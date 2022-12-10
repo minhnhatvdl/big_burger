@@ -136,7 +136,7 @@ class _BurgerModalBottomSheetState extends State<BurgerModalBottomSheet> {
                                   style: ElevatedButton.styleFrom(shape: const StadiumBorder(), backgroundColor: theme.primaryColor),
                                   onPressed: _quantity != widget.order.quantity || _quantity > 0
                                       ? () {
-                                          _menuBloc.updateMenu(widget.order.copyWith(quantity: _quantity));
+                                          _menuBloc.updateOrders(widget.order.copyWith(quantity: _quantity));
                                           Navigator.of(context).pop();
                                         }
                                       : null,

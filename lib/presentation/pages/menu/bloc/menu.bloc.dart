@@ -26,8 +26,13 @@ class MenuBloc extends StateNotifier<MenuState> {
     }
   }
 
-  void updateMenu(OrderEntity order) {
-    ordersUsecase.updateMenu(order);
+  void updateOrders(OrderEntity order) {
+    ordersUsecase.updateOrders(order);
+    state = LoadedMenuState(menu);
+  }
+
+  void refreshOrders() {
+    ordersUsecase.refreshOrders();
     state = LoadedMenuState(menu);
   }
 }

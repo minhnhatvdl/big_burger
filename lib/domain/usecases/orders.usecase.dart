@@ -28,8 +28,38 @@ class OrdersUsecase {
     return const RepositoryResponse<SimpleStatus, List<OrderEntity>>(status: SimpleStatus.error);
   }
 
+  void updateCart(OrderEntity order) {
+    final index = cart.indexWhere((item) => item.burger.ref == order.burger.ref);
+    if (index > -1) {
+      if (order.quantity > 0) {
+        cart[index] = order;
+      } else {
+        cart.removeAt(index);
+      }
+    } else {
+      cart.add(order);
+    }
+  }
+
   void updateMenu(OrderEntity order) {
     final index = menu.indexWhere((item) => item.burger.ref == order.burger.ref);
     menu[index] = order;
+  }
+
+  void updateOrders(OrderEntity order) {
+    updateCart(order);
+    updateMenu(order);
+  }
+
+  void refreshOrders() {
+    final refsCart = cart.map((item) => item.burger.ref).toList();
+    for (var i = 0; i < menu.length; i++) {
+      if (refsCart.contains(menu[i].burger.ref)) {
+        final index = cart.indexWhere((item) => item.burger.ref == menu[i].burger.ref);
+        menu[i] = cart[index];
+      } else {
+        menu[i] = menu[i].copyWith(quantity: 0);
+      }
+    }
   }
 }

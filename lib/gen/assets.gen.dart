@@ -12,6 +12,9 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/arrow-left.svg
+  String get arrowLeft => 'assets/icons/arrow-left.svg';
+
   /// File path: assets/icons/cross.svg
   String get cross => 'assets/icons/cross.svg';
 
@@ -22,7 +25,7 @@ class $AssetsIconsGen {
   String get plus => 'assets/icons/plus.svg';
 
   /// List of all assets
-  List<String> get values => [cross, minus, plus];
+  List<String> get values => [arrowLeft, cross, minus, plus];
 }
 
 class Assets {

@@ -1,4 +1,5 @@
 import 'package:big_burger/domain/utils/number_util.dart';
+import 'package:big_burger/presentation/pages/cart/ui/cart.page.dart';
 import 'package:big_burger/presentation/pages/menu/bloc/menu.bloc.dart';
 import 'package:big_burger/presentation/pages/menu/bloc/menu_state/menu.state.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,15 @@ class OrderButton extends StatelessWidget {
               ),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(shape: const StadiumBorder(), backgroundColor: theme.primaryColor),
-                onPressed: () {},
+                onPressed: () async {
+                  final shouldRefresh = await Navigator.push(
+                    context,
+                    MaterialPageRoute<bool>(builder: (context) => const CartPage()),
+                  );
+                  if (shouldRefresh ?? false) {
+                    menuBloc.refreshOrders();
+                  }
+                },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Row(
