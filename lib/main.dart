@@ -1,4 +1,5 @@
 import 'package:big_burger/core/app_theme.dart';
+import 'package:big_burger/presentation/pages/menu/ui/menu.page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         Locale('fr', ''),
       ],
       theme: AppTheme.theme,
-      home: Container(),
+      home: const MenuPage(),
     );
   }
 }
