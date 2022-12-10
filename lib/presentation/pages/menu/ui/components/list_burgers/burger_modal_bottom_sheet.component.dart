@@ -7,6 +7,7 @@ import 'package:big_burger/presentation/widgets/svg_icon_button.widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class BurgerModalBottomSheet extends StatefulWidget {
   const BurgerModalBottomSheet({required this.order, required this.ctx, Key? key}) : super(key: key);
@@ -33,6 +34,7 @@ class _BurgerModalBottomSheetState extends State<BurgerModalBottomSheet> {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
+    final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
 
     return FractionallySizedBox(
       heightFactor: 0.9,
@@ -143,7 +145,7 @@ class _BurgerModalBottomSheetState extends State<BurgerModalBottomSheet> {
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 10),
                                     child: Text(
-                                      'Total ${NumberUtil.formatPrice(_quantity * _burger.price)}',
+                                      '${appLocalizations.totalButton} ${NumberUtil.formatPrice(_quantity * _burger.price)}',
                                       style: theme.textTheme.subtitle1?.copyWith(color: Colors.white),
                                     ),
                                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MenuAppBar extends StatelessWidget {
   const MenuAppBar({Key? key}) : super(key: key);
@@ -6,9 +7,10 @@ class MenuAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
+    final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
 
     return SliverAppBar(
-      title: Text('Big Burger', style: theme.textTheme.headline6?.copyWith(color: theme.primaryColor)),
+      title: Text(appLocalizations.appName, style: theme.textTheme.headline6?.copyWith(color: theme.primaryColor)),
       centerTitle: true,
       pinned: true,
       floating: true,

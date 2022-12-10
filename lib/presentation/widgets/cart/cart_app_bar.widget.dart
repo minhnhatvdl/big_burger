@@ -1,6 +1,7 @@
 import 'package:big_burger/gen/assets.gen.dart';
 import 'package:big_burger/presentation/widgets/svg_icon_button.widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CartAppBar extends StatelessWidget {
   const CartAppBar({Key? key}) : super(key: key);
@@ -8,6 +9,7 @@ class CartAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
+    final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
 
     return SliverAppBar(
       leading: SvgIconButton(
@@ -15,7 +17,7 @@ class CartAppBar extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         svg: Assets.icons.arrowLeft,
       ),
-      title: Text('Cart', style: theme.textTheme.headline6?.copyWith(color: theme.primaryColor)),
+      title: Text(appLocalizations.cartTitle, style: theme.textTheme.headline6?.copyWith(color: theme.primaryColor)),
       centerTitle: true,
       pinned: true,
       floating: true,

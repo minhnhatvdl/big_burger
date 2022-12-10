@@ -4,6 +4,7 @@ import 'package:big_burger/presentation/pages/cart/bloc/cart_state/cart.state.da
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CartButton extends StatelessWidget {
   const CartButton({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class CartButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
     final cartBloc = context.read<CartBloc>();
 
     return StateNotifierBuilder<CartState>(
@@ -37,7 +39,7 @@ class CartButton extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Total de commande', style: theme.textTheme.bodyText2),
+                    Text(appLocalizations.orderTotal, style: theme.textTheme.bodyText2),
                     Text(NumberUtil.formatPrice(cartBloc.totalPrice), style: theme.textTheme.subtitle1),
                   ],
                 ),
@@ -48,7 +50,7 @@ class CartButton extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Text(
-                    'Finaliser la commande',
+                    appLocalizations.completeOrderButton,
                     style: theme.textTheme.subtitle1?.copyWith(color: Colors.white),
                   ),
                 ),

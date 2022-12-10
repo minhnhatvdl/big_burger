@@ -2,6 +2,7 @@ import 'package:big_burger/domain/entities/order/order.entity.dart';
 import 'package:big_burger/presentation/pages/menu/bloc/menu.bloc.dart';
 import 'package:big_burger/presentation/pages/menu/bloc/menu_state/menu.state.dart';
 import 'package:big_burger/presentation/widgets/menu/burger_item.widget.dart';
+import 'package:big_burger/presentation/widgets/menu/error_menu.widget.dart';
 import 'package:big_burger/presentation/widgets/menu/loading_burger_item.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
@@ -11,7 +12,6 @@ class ListBurgers extends StatelessWidget {
   const ListBurgers({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final menuBloc = context.read<MenuBloc>();
 
     return StateNotifierBuilder<MenuState>(
@@ -33,31 +33,7 @@ class ListBurgers extends StatelessWidget {
             ),
           );
         } else if (state is ErrorMenuState) {
-          return SliverToBoxAdapter(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
-                  child: Text(
-                    'Malheureusement, une erreur du serveur nous a empêché de finaliser votre demande. Merci de réessayer.',
-                    style: theme.textTheme.subtitle2,
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(shape: const StadiumBorder(), backgroundColor: theme.primaryColor),
-                  onPressed: menuBloc.getMenu,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Text(
-                      'Rafraîchir',
-                      style: theme.textTheme.subtitle1?.copyWith(color: Colors.white),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          );
+          return SliverToBoxAdapter(child: ErrorMenu(onRefresh: menuBloc.getMenu));
         }
         return const SliverToBoxAdapter();
       },

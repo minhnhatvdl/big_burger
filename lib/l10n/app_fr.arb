@@ -1,3 +1,11 @@
 {
-    "appName": "Big Burger"
+    "appName": "Big Burger",
+    "seeOrderButton": "Voir la commande",
+    "totalButton": "Total",
+    "cartTitle": "Panier",
+    "orderTotal": "Total de commande",
+    "completeOrderButton": "Finaliser la commande",
+    "serverError": "Malheureusement, une erreur du serveur nous a empêché de finaliser votre demande. Merci de réessayer.",
+    "refreshButton": "Rafraîchir",
+    "updateButton": "Mettre à jour"
 }

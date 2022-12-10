@@ -5,6 +5,7 @@ import 'package:big_burger/presentation/pages/menu/bloc/menu_state/menu.state.da
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class OrderButton extends StatelessWidget {
   const OrderButton({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class OrderButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final menuBloc = context.read<MenuBloc>();
+    final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
 
     return StateNotifierBuilder<MenuState>(
       stateNotifier: context.read<MenuBloc>(),
@@ -64,7 +66,7 @@ class OrderButton extends StatelessWidget {
                                 fit: BoxFit.scaleDown,
                                 alignment: Alignment.topLeft,
                                 child: Text(
-                                  'Voir la commande',
+                                  appLocalizations.seeOrderButton,
                                   style: theme.textTheme.subtitle1?.copyWith(color: Colors.white),
                                 ),
                               ),
