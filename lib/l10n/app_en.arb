@@ -7,5 +7,7 @@
     "completeOrderButton": "Complete order",
     "serverError": "Unfortunately, a server error prevented us from completing your request. Please try again.",
     "refreshButton": "Refresh",
-    "updateButton": "Update"
+    "updateButton": "Update",
+    "thanksOrder": "Thank you for your order"
+
 }

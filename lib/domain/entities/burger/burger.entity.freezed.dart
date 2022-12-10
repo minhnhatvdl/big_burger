@@ -12,38 +12,11 @@ part of 'burger.entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 BurgerEntity _$BurgerEntityFromJson(Map<String, dynamic> json) {
   return _BurgerEntity.fromJson(json);
 }
-
-/// @nodoc
-class _$BurgerEntityTearOff {
-  const _$BurgerEntityTearOff();
-
-  _BurgerEntity call(
-      {required String ref,
-      required String title,
-      required int price,
-      required String description,
-      required String thumbnail}) {
-    return _BurgerEntity(
-      ref: ref,
-      title: title,
-      price: price,
-      description: description,
-      thumbnail: thumbnail,
-    );
-  }
-
-  BurgerEntity fromJson(Map<String, Object?> json) {
-    return BurgerEntity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BurgerEntity = _$BurgerEntityTearOff();
 
 /// @nodoc
 mixin _$BurgerEntity {
@@ -114,11 +87,11 @@ class _$BurgerEntityCopyWithImpl<$Res> implements $BurgerEntityCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BurgerEntityCopyWith<$Res>
+abstract class _$$_BurgerEntityCopyWith<$Res>
     implements $BurgerEntityCopyWith<$Res> {
-  factory _$BurgerEntityCopyWith(
-          _BurgerEntity value, $Res Function(_BurgerEntity) then) =
-      __$BurgerEntityCopyWithImpl<$Res>;
+  factory _$$_BurgerEntityCopyWith(
+          _$_BurgerEntity value, $Res Function(_$_BurgerEntity) then) =
+      __$$_BurgerEntityCopyWithImpl<$Res>;
   @override
   $Res call(
       {String ref,
@@ -129,14 +102,15 @@ abstract class _$BurgerEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BurgerEntityCopyWithImpl<$Res> extends _$BurgerEntityCopyWithImpl<$Res>
-    implements _$BurgerEntityCopyWith<$Res> {
-  __$BurgerEntityCopyWithImpl(
-      _BurgerEntity _value, $Res Function(_BurgerEntity) _then)
-      : super(_value, (v) => _then(v as _BurgerEntity));
+class __$$_BurgerEntityCopyWithImpl<$Res>
+    extends _$BurgerEntityCopyWithImpl<$Res>
+    implements _$$_BurgerEntityCopyWith<$Res> {
+  __$$_BurgerEntityCopyWithImpl(
+      _$_BurgerEntity _value, $Res Function(_$_BurgerEntity) _then)
+      : super(_value, (v) => _then(v as _$_BurgerEntity));
 
   @override
-  _BurgerEntity get _value => super._value as _BurgerEntity;
+  _$_BurgerEntity get _value => super._value as _$_BurgerEntity;
 
   @override
   $Res call({
@@ -146,7 +120,7 @@ class __$BurgerEntityCopyWithImpl<$Res> extends _$BurgerEntityCopyWithImpl<$Res>
     Object? description = freezed,
     Object? thumbnail = freezed,
   }) {
-    return _then(_BurgerEntity(
+    return _then(_$_BurgerEntity(
       ref: ref == freezed
           ? _value.ref
           : ref // ignore: cast_nullable_to_non_nullable
@@ -205,7 +179,7 @@ class _$_BurgerEntity implements _BurgerEntity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BurgerEntity &&
+            other is _$_BurgerEntity &&
             const DeepCollectionEquality().equals(other.ref, ref) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.price, price) &&
@@ -214,6 +188,7 @@ class _$_BurgerEntity implements _BurgerEntity {
             const DeepCollectionEquality().equals(other.thumbnail, thumbnail));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -225,22 +200,24 @@ class _$_BurgerEntity implements _BurgerEntity {
 
   @JsonKey(ignore: true)
   @override
-  _$BurgerEntityCopyWith<_BurgerEntity> get copyWith =>
-      __$BurgerEntityCopyWithImpl<_BurgerEntity>(this, _$identity);
+  _$$_BurgerEntityCopyWith<_$_BurgerEntity> get copyWith =>
+      __$$_BurgerEntityCopyWithImpl<_$_BurgerEntity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BurgerEntityToJson(this);
+    return _$$_BurgerEntityToJson(
+      this,
+    );
   }
 }
 
 abstract class _BurgerEntity implements BurgerEntity {
   const factory _BurgerEntity(
-      {required String ref,
-      required String title,
-      required int price,
-      required String description,
-      required String thumbnail}) = _$_BurgerEntity;
+      {required final String ref,
+      required final String title,
+      required final int price,
+      required final String description,
+      required final String thumbnail}) = _$_BurgerEntity;
 
   factory _BurgerEntity.fromJson(Map<String, dynamic> json) =
       _$_BurgerEntity.fromJson;
@@ -257,6 +234,6 @@ abstract class _BurgerEntity implements BurgerEntity {
   String get thumbnail;
   @override
   @JsonKey(ignore: true)
-  _$BurgerEntityCopyWith<_BurgerEntity> get copyWith =>
+  _$$_BurgerEntityCopyWith<_$_BurgerEntity> get copyWith =>
       throw _privateConstructorUsedError;
 }

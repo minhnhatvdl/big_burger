@@ -12,38 +12,11 @@ part of 'burger.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 DtoBurger _$DtoBurgerFromJson(Map<String, dynamic> json) {
   return _DtoBurger.fromJson(json);
 }
-
-/// @nodoc
-class _$DtoBurgerTearOff {
-  const _$DtoBurgerTearOff();
-
-  _DtoBurger call(
-      {required String ref,
-      required String title,
-      required int price,
-      String? description,
-      String? thumbnail}) {
-    return _DtoBurger(
-      ref: ref,
-      title: title,
-      price: price,
-      description: description,
-      thumbnail: thumbnail,
-    );
-  }
-
-  DtoBurger fromJson(Map<String, Object?> json) {
-    return DtoBurger.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DtoBurger = _$DtoBurgerTearOff();
 
 /// @nodoc
 mixin _$DtoBurger {
@@ -113,10 +86,10 @@ class _$DtoBurgerCopyWithImpl<$Res> implements $DtoBurgerCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$DtoBurgerCopyWith<$Res> implements $DtoBurgerCopyWith<$Res> {
-  factory _$DtoBurgerCopyWith(
-          _DtoBurger value, $Res Function(_DtoBurger) then) =
-      __$DtoBurgerCopyWithImpl<$Res>;
+abstract class _$$_DtoBurgerCopyWith<$Res> implements $DtoBurgerCopyWith<$Res> {
+  factory _$$_DtoBurgerCopyWith(
+          _$_DtoBurger value, $Res Function(_$_DtoBurger) then) =
+      __$$_DtoBurgerCopyWithImpl<$Res>;
   @override
   $Res call(
       {String ref,
@@ -127,13 +100,14 @@ abstract class _$DtoBurgerCopyWith<$Res> implements $DtoBurgerCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$DtoBurgerCopyWithImpl<$Res> extends _$DtoBurgerCopyWithImpl<$Res>
-    implements _$DtoBurgerCopyWith<$Res> {
-  __$DtoBurgerCopyWithImpl(_DtoBurger _value, $Res Function(_DtoBurger) _then)
-      : super(_value, (v) => _then(v as _DtoBurger));
+class __$$_DtoBurgerCopyWithImpl<$Res> extends _$DtoBurgerCopyWithImpl<$Res>
+    implements _$$_DtoBurgerCopyWith<$Res> {
+  __$$_DtoBurgerCopyWithImpl(
+      _$_DtoBurger _value, $Res Function(_$_DtoBurger) _then)
+      : super(_value, (v) => _then(v as _$_DtoBurger));
 
   @override
-  _DtoBurger get _value => super._value as _DtoBurger;
+  _$_DtoBurger get _value => super._value as _$_DtoBurger;
 
   @override
   $Res call({
@@ -143,7 +117,7 @@ class __$DtoBurgerCopyWithImpl<$Res> extends _$DtoBurgerCopyWithImpl<$Res>
     Object? description = freezed,
     Object? thumbnail = freezed,
   }) {
-    return _then(_DtoBurger(
+    return _then(_$_DtoBurger(
       ref: ref == freezed
           ? _value.ref
           : ref // ignore: cast_nullable_to_non_nullable
@@ -202,7 +176,7 @@ class _$_DtoBurger implements _DtoBurger {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DtoBurger &&
+            other is _$_DtoBurger &&
             const DeepCollectionEquality().equals(other.ref, ref) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.price, price) &&
@@ -211,6 +185,7 @@ class _$_DtoBurger implements _DtoBurger {
             const DeepCollectionEquality().equals(other.thumbnail, thumbnail));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -222,22 +197,24 @@ class _$_DtoBurger implements _DtoBurger {
 
   @JsonKey(ignore: true)
   @override
-  _$DtoBurgerCopyWith<_DtoBurger> get copyWith =>
-      __$DtoBurgerCopyWithImpl<_DtoBurger>(this, _$identity);
+  _$$_DtoBurgerCopyWith<_$_DtoBurger> get copyWith =>
+      __$$_DtoBurgerCopyWithImpl<_$_DtoBurger>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DtoBurgerToJson(this);
+    return _$$_DtoBurgerToJson(
+      this,
+    );
   }
 }
 
 abstract class _DtoBurger implements DtoBurger {
   const factory _DtoBurger(
-      {required String ref,
-      required String title,
-      required int price,
-      String? description,
-      String? thumbnail}) = _$_DtoBurger;
+      {required final String ref,
+      required final String title,
+      required final int price,
+      final String? description,
+      final String? thumbnail}) = _$_DtoBurger;
 
   factory _DtoBurger.fromJson(Map<String, dynamic> json) =
       _$_DtoBurger.fromJson;
@@ -254,6 +231,6 @@ abstract class _DtoBurger implements DtoBurger {
   String? get thumbnail;
   @override
   @JsonKey(ignore: true)
-  _$DtoBurgerCopyWith<_DtoBurger> get copyWith =>
+  _$$_DtoBurgerCopyWith<_$_DtoBurger> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -10,6 +10,7 @@ class AppTheme {
     brightness: Brightness.light,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     primaryColor: primaryColor,
+    colorScheme: const ColorScheme.light(secondary: secondaryColor),
     dividerColor: tertiaryColor,
     canvasColor: loadingColor,
     scaffoldBackgroundColor: Colors.white,

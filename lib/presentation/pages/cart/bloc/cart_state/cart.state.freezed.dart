@@ -12,33 +12,7 @@ part of 'cart.state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$CartStateTearOff {
-  const _$CartStateTearOff();
-
-  InitCartState init() {
-    return const InitCartState();
-  }
-
-  ErrorCartState error() {
-    return const ErrorCartState();
-  }
-
-  LoadingCartState loading() {
-    return const LoadingCartState();
-  }
-
-  LoadedCartState loaded(List<OrderEntity> cart) {
-    return LoadedCartState(
-      cart,
-    );
-  }
-}
-
-/// @nodoc
-const $CartState = _$CartStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$CartState {
@@ -110,21 +84,21 @@ class _$CartStateCopyWithImpl<$Res> implements $CartStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $InitCartStateCopyWith<$Res> {
-  factory $InitCartStateCopyWith(
-          InitCartState value, $Res Function(InitCartState) then) =
-      _$InitCartStateCopyWithImpl<$Res>;
+abstract class _$$InitCartStateCopyWith<$Res> {
+  factory _$$InitCartStateCopyWith(
+          _$InitCartState value, $Res Function(_$InitCartState) then) =
+      __$$InitCartStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitCartStateCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
-    implements $InitCartStateCopyWith<$Res> {
-  _$InitCartStateCopyWithImpl(
-      InitCartState _value, $Res Function(InitCartState) _then)
-      : super(_value, (v) => _then(v as InitCartState));
+class __$$InitCartStateCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
+    implements _$$InitCartStateCopyWith<$Res> {
+  __$$InitCartStateCopyWithImpl(
+      _$InitCartState _value, $Res Function(_$InitCartState) _then)
+      : super(_value, (v) => _then(v as _$InitCartState));
 
   @override
-  InitCartState get _value => super._value as InitCartState;
+  _$InitCartState get _value => super._value as _$InitCartState;
 }
 
 /// @nodoc
@@ -140,7 +114,7 @@ class _$InitCartState implements InitCartState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is InitCartState);
+        (other.runtimeType == runtimeType && other is _$InitCartState);
   }
 
   @override
@@ -226,21 +200,21 @@ abstract class InitCartState implements CartState {
 }
 
 /// @nodoc
-abstract class $ErrorCartStateCopyWith<$Res> {
-  factory $ErrorCartStateCopyWith(
-          ErrorCartState value, $Res Function(ErrorCartState) then) =
-      _$ErrorCartStateCopyWithImpl<$Res>;
+abstract class _$$ErrorCartStateCopyWith<$Res> {
+  factory _$$ErrorCartStateCopyWith(
+          _$ErrorCartState value, $Res Function(_$ErrorCartState) then) =
+      __$$ErrorCartStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ErrorCartStateCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
-    implements $ErrorCartStateCopyWith<$Res> {
-  _$ErrorCartStateCopyWithImpl(
-      ErrorCartState _value, $Res Function(ErrorCartState) _then)
-      : super(_value, (v) => _then(v as ErrorCartState));
+class __$$ErrorCartStateCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
+    implements _$$ErrorCartStateCopyWith<$Res> {
+  __$$ErrorCartStateCopyWithImpl(
+      _$ErrorCartState _value, $Res Function(_$ErrorCartState) _then)
+      : super(_value, (v) => _then(v as _$ErrorCartState));
 
   @override
-  ErrorCartState get _value => super._value as ErrorCartState;
+  _$ErrorCartState get _value => super._value as _$ErrorCartState;
 }
 
 /// @nodoc
@@ -256,7 +230,7 @@ class _$ErrorCartState implements ErrorCartState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ErrorCartState);
+        (other.runtimeType == runtimeType && other is _$ErrorCartState);
   }
 
   @override
@@ -342,21 +316,22 @@ abstract class ErrorCartState implements CartState {
 }
 
 /// @nodoc
-abstract class $LoadingCartStateCopyWith<$Res> {
-  factory $LoadingCartStateCopyWith(
-          LoadingCartState value, $Res Function(LoadingCartState) then) =
-      _$LoadingCartStateCopyWithImpl<$Res>;
+abstract class _$$LoadingCartStateCopyWith<$Res> {
+  factory _$$LoadingCartStateCopyWith(
+          _$LoadingCartState value, $Res Function(_$LoadingCartState) then) =
+      __$$LoadingCartStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadingCartStateCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
-    implements $LoadingCartStateCopyWith<$Res> {
-  _$LoadingCartStateCopyWithImpl(
-      LoadingCartState _value, $Res Function(LoadingCartState) _then)
-      : super(_value, (v) => _then(v as LoadingCartState));
+class __$$LoadingCartStateCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res>
+    implements _$$LoadingCartStateCopyWith<$Res> {
+  __$$LoadingCartStateCopyWithImpl(
+      _$LoadingCartState _value, $Res Function(_$LoadingCartState) _then)
+      : super(_value, (v) => _then(v as _$LoadingCartState));
 
   @override
-  LoadingCartState get _value => super._value as LoadingCartState;
+  _$LoadingCartState get _value => super._value as _$LoadingCartState;
 }
 
 /// @nodoc
@@ -372,7 +347,7 @@ class _$LoadingCartState implements LoadingCartState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is LoadingCartState);
+        (other.runtimeType == runtimeType && other is _$LoadingCartState);
   }
 
   @override
@@ -458,30 +433,31 @@ abstract class LoadingCartState implements CartState {
 }
 
 /// @nodoc
-abstract class $LoadedCartStateCopyWith<$Res> {
-  factory $LoadedCartStateCopyWith(
-          LoadedCartState value, $Res Function(LoadedCartState) then) =
-      _$LoadedCartStateCopyWithImpl<$Res>;
+abstract class _$$LoadedCartStateCopyWith<$Res> {
+  factory _$$LoadedCartStateCopyWith(
+          _$LoadedCartState value, $Res Function(_$LoadedCartState) then) =
+      __$$LoadedCartStateCopyWithImpl<$Res>;
   $Res call({List<OrderEntity> cart});
 }
 
 /// @nodoc
-class _$LoadedCartStateCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
-    implements $LoadedCartStateCopyWith<$Res> {
-  _$LoadedCartStateCopyWithImpl(
-      LoadedCartState _value, $Res Function(LoadedCartState) _then)
-      : super(_value, (v) => _then(v as LoadedCartState));
+class __$$LoadedCartStateCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res>
+    implements _$$LoadedCartStateCopyWith<$Res> {
+  __$$LoadedCartStateCopyWithImpl(
+      _$LoadedCartState _value, $Res Function(_$LoadedCartState) _then)
+      : super(_value, (v) => _then(v as _$LoadedCartState));
 
   @override
-  LoadedCartState get _value => super._value as LoadedCartState;
+  _$LoadedCartState get _value => super._value as _$LoadedCartState;
 
   @override
   $Res call({
     Object? cart = freezed,
   }) {
-    return _then(LoadedCartState(
+    return _then(_$LoadedCartState(
       cart == freezed
-          ? _value.cart
+          ? _value._cart
           : cart // ignore: cast_nullable_to_non_nullable
               as List<OrderEntity>,
     ));
@@ -491,10 +467,14 @@ class _$LoadedCartStateCopyWithImpl<$Res> extends _$CartStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadedCartState implements LoadedCartState {
-  const _$LoadedCartState(this.cart);
+  const _$LoadedCartState(final List<OrderEntity> cart) : _cart = cart;
 
+  final List<OrderEntity> _cart;
   @override
-  final List<OrderEntity> cart;
+  List<OrderEntity> get cart {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_cart);
+  }
 
   @override
   String toString() {
@@ -505,18 +485,18 @@ class _$LoadedCartState implements LoadedCartState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LoadedCartState &&
-            const DeepCollectionEquality().equals(other.cart, cart));
+            other is _$LoadedCartState &&
+            const DeepCollectionEquality().equals(other._cart, _cart));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(cart));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_cart));
 
   @JsonKey(ignore: true)
   @override
-  $LoadedCartStateCopyWith<LoadedCartState> get copyWith =>
-      _$LoadedCartStateCopyWithImpl<LoadedCartState>(this, _$identity);
+  _$$LoadedCartStateCopyWith<_$LoadedCartState> get copyWith =>
+      __$$LoadedCartStateCopyWithImpl<_$LoadedCartState>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -594,10 +574,11 @@ class _$LoadedCartState implements LoadedCartState {
 }
 
 abstract class LoadedCartState implements CartState {
-  const factory LoadedCartState(List<OrderEntity> cart) = _$LoadedCartState;
+  const factory LoadedCartState(final List<OrderEntity> cart) =
+      _$LoadedCartState;
 
   List<OrderEntity> get cart;
   @JsonKey(ignore: true)
-  $LoadedCartStateCopyWith<LoadedCartState> get copyWith =>
+  _$$LoadedCartStateCopyWith<_$LoadedCartState> get copyWith =>
       throw _privateConstructorUsedError;
 }

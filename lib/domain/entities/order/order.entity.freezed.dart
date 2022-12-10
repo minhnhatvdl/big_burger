@@ -12,30 +12,11 @@ part of 'order.entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 OrderEntity _$OrderEntityFromJson(Map<String, dynamic> json) {
   return _OrderEntity.fromJson(json);
 }
-
-/// @nodoc
-class _$OrderEntityTearOff {
-  const _$OrderEntityTearOff();
-
-  _OrderEntity call({required int quantity, required BurgerEntity burger}) {
-    return _OrderEntity(
-      quantity: quantity,
-      burger: burger,
-    );
-  }
-
-  OrderEntity fromJson(Map<String, Object?> json) {
-    return OrderEntity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OrderEntity = _$OrderEntityTearOff();
 
 /// @nodoc
 mixin _$OrderEntity {
@@ -92,11 +73,11 @@ class _$OrderEntityCopyWithImpl<$Res> implements $OrderEntityCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$OrderEntityCopyWith<$Res>
+abstract class _$$_OrderEntityCopyWith<$Res>
     implements $OrderEntityCopyWith<$Res> {
-  factory _$OrderEntityCopyWith(
-          _OrderEntity value, $Res Function(_OrderEntity) then) =
-      __$OrderEntityCopyWithImpl<$Res>;
+  factory _$$_OrderEntityCopyWith(
+          _$_OrderEntity value, $Res Function(_$_OrderEntity) then) =
+      __$$_OrderEntityCopyWithImpl<$Res>;
   @override
   $Res call({int quantity, BurgerEntity burger});
 
@@ -105,21 +86,21 @@ abstract class _$OrderEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$OrderEntityCopyWithImpl<$Res> extends _$OrderEntityCopyWithImpl<$Res>
-    implements _$OrderEntityCopyWith<$Res> {
-  __$OrderEntityCopyWithImpl(
-      _OrderEntity _value, $Res Function(_OrderEntity) _then)
-      : super(_value, (v) => _then(v as _OrderEntity));
+class __$$_OrderEntityCopyWithImpl<$Res> extends _$OrderEntityCopyWithImpl<$Res>
+    implements _$$_OrderEntityCopyWith<$Res> {
+  __$$_OrderEntityCopyWithImpl(
+      _$_OrderEntity _value, $Res Function(_$_OrderEntity) _then)
+      : super(_value, (v) => _then(v as _$_OrderEntity));
 
   @override
-  _OrderEntity get _value => super._value as _OrderEntity;
+  _$_OrderEntity get _value => super._value as _$_OrderEntity;
 
   @override
   $Res call({
     Object? quantity = freezed,
     Object? burger = freezed,
   }) {
-    return _then(_OrderEntity(
+    return _then(_$_OrderEntity(
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -155,11 +136,12 @@ class _$_OrderEntity implements _OrderEntity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _OrderEntity &&
+            other is _$_OrderEntity &&
             const DeepCollectionEquality().equals(other.quantity, quantity) &&
             const DeepCollectionEquality().equals(other.burger, burger));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -168,18 +150,21 @@ class _$_OrderEntity implements _OrderEntity {
 
   @JsonKey(ignore: true)
   @override
-  _$OrderEntityCopyWith<_OrderEntity> get copyWith =>
-      __$OrderEntityCopyWithImpl<_OrderEntity>(this, _$identity);
+  _$$_OrderEntityCopyWith<_$_OrderEntity> get copyWith =>
+      __$$_OrderEntityCopyWithImpl<_$_OrderEntity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrderEntityToJson(this);
+    return _$$_OrderEntityToJson(
+      this,
+    );
   }
 }
 
 abstract class _OrderEntity implements OrderEntity {
   const factory _OrderEntity(
-      {required int quantity, required BurgerEntity burger}) = _$_OrderEntity;
+      {required final int quantity,
+      required final BurgerEntity burger}) = _$_OrderEntity;
 
   factory _OrderEntity.fromJson(Map<String, dynamic> json) =
       _$_OrderEntity.fromJson;
@@ -190,6 +175,6 @@ abstract class _OrderEntity implements OrderEntity {
   BurgerEntity get burger;
   @override
   @JsonKey(ignore: true)
-  _$OrderEntityCopyWith<_OrderEntity> get copyWith =>
+  _$$_OrderEntityCopyWith<_$_OrderEntity> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,33 +12,7 @@ part of 'menu.state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$MenuStateTearOff {
-  const _$MenuStateTearOff();
-
-  InitMenuState init() {
-    return const InitMenuState();
-  }
-
-  ErrorMenuState error() {
-    return const ErrorMenuState();
-  }
-
-  LoadingMenuState loading() {
-    return const LoadingMenuState();
-  }
-
-  LoadedMenuState loaded(List<OrderEntity> menu) {
-    return LoadedMenuState(
-      menu,
-    );
-  }
-}
-
-/// @nodoc
-const $MenuState = _$MenuStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$MenuState {
@@ -110,21 +84,21 @@ class _$MenuStateCopyWithImpl<$Res> implements $MenuStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $InitMenuStateCopyWith<$Res> {
-  factory $InitMenuStateCopyWith(
-          InitMenuState value, $Res Function(InitMenuState) then) =
-      _$InitMenuStateCopyWithImpl<$Res>;
+abstract class _$$InitMenuStateCopyWith<$Res> {
+  factory _$$InitMenuStateCopyWith(
+          _$InitMenuState value, $Res Function(_$InitMenuState) then) =
+      __$$InitMenuStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitMenuStateCopyWithImpl<$Res> extends _$MenuStateCopyWithImpl<$Res>
-    implements $InitMenuStateCopyWith<$Res> {
-  _$InitMenuStateCopyWithImpl(
-      InitMenuState _value, $Res Function(InitMenuState) _then)
-      : super(_value, (v) => _then(v as InitMenuState));
+class __$$InitMenuStateCopyWithImpl<$Res> extends _$MenuStateCopyWithImpl<$Res>
+    implements _$$InitMenuStateCopyWith<$Res> {
+  __$$InitMenuStateCopyWithImpl(
+      _$InitMenuState _value, $Res Function(_$InitMenuState) _then)
+      : super(_value, (v) => _then(v as _$InitMenuState));
 
   @override
-  InitMenuState get _value => super._value as InitMenuState;
+  _$InitMenuState get _value => super._value as _$InitMenuState;
 }
 
 /// @nodoc
@@ -140,7 +114,7 @@ class _$InitMenuState implements InitMenuState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is InitMenuState);
+        (other.runtimeType == runtimeType && other is _$InitMenuState);
   }
 
   @override
@@ -226,21 +200,21 @@ abstract class InitMenuState implements MenuState {
 }
 
 /// @nodoc
-abstract class $ErrorMenuStateCopyWith<$Res> {
-  factory $ErrorMenuStateCopyWith(
-          ErrorMenuState value, $Res Function(ErrorMenuState) then) =
-      _$ErrorMenuStateCopyWithImpl<$Res>;
+abstract class _$$ErrorMenuStateCopyWith<$Res> {
+  factory _$$ErrorMenuStateCopyWith(
+          _$ErrorMenuState value, $Res Function(_$ErrorMenuState) then) =
+      __$$ErrorMenuStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ErrorMenuStateCopyWithImpl<$Res> extends _$MenuStateCopyWithImpl<$Res>
-    implements $ErrorMenuStateCopyWith<$Res> {
-  _$ErrorMenuStateCopyWithImpl(
-      ErrorMenuState _value, $Res Function(ErrorMenuState) _then)
-      : super(_value, (v) => _then(v as ErrorMenuState));
+class __$$ErrorMenuStateCopyWithImpl<$Res> extends _$MenuStateCopyWithImpl<$Res>
+    implements _$$ErrorMenuStateCopyWith<$Res> {
+  __$$ErrorMenuStateCopyWithImpl(
+      _$ErrorMenuState _value, $Res Function(_$ErrorMenuState) _then)
+      : super(_value, (v) => _then(v as _$ErrorMenuState));
 
   @override
-  ErrorMenuState get _value => super._value as ErrorMenuState;
+  _$ErrorMenuState get _value => super._value as _$ErrorMenuState;
 }
 
 /// @nodoc
@@ -256,7 +230,7 @@ class _$ErrorMenuState implements ErrorMenuState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ErrorMenuState);
+        (other.runtimeType == runtimeType && other is _$ErrorMenuState);
   }
 
   @override
@@ -342,21 +316,22 @@ abstract class ErrorMenuState implements MenuState {
 }
 
 /// @nodoc
-abstract class $LoadingMenuStateCopyWith<$Res> {
-  factory $LoadingMenuStateCopyWith(
-          LoadingMenuState value, $Res Function(LoadingMenuState) then) =
-      _$LoadingMenuStateCopyWithImpl<$Res>;
+abstract class _$$LoadingMenuStateCopyWith<$Res> {
+  factory _$$LoadingMenuStateCopyWith(
+          _$LoadingMenuState value, $Res Function(_$LoadingMenuState) then) =
+      __$$LoadingMenuStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadingMenuStateCopyWithImpl<$Res> extends _$MenuStateCopyWithImpl<$Res>
-    implements $LoadingMenuStateCopyWith<$Res> {
-  _$LoadingMenuStateCopyWithImpl(
-      LoadingMenuState _value, $Res Function(LoadingMenuState) _then)
-      : super(_value, (v) => _then(v as LoadingMenuState));
+class __$$LoadingMenuStateCopyWithImpl<$Res>
+    extends _$MenuStateCopyWithImpl<$Res>
+    implements _$$LoadingMenuStateCopyWith<$Res> {
+  __$$LoadingMenuStateCopyWithImpl(
+      _$LoadingMenuState _value, $Res Function(_$LoadingMenuState) _then)
+      : super(_value, (v) => _then(v as _$LoadingMenuState));
 
   @override
-  LoadingMenuState get _value => super._value as LoadingMenuState;
+  _$LoadingMenuState get _value => super._value as _$LoadingMenuState;
 }
 
 /// @nodoc
@@ -372,7 +347,7 @@ class _$LoadingMenuState implements LoadingMenuState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is LoadingMenuState);
+        (other.runtimeType == runtimeType && other is _$LoadingMenuState);
   }
 
   @override
@@ -458,30 +433,31 @@ abstract class LoadingMenuState implements MenuState {
 }
 
 /// @nodoc
-abstract class $LoadedMenuStateCopyWith<$Res> {
-  factory $LoadedMenuStateCopyWith(
-          LoadedMenuState value, $Res Function(LoadedMenuState) then) =
-      _$LoadedMenuStateCopyWithImpl<$Res>;
+abstract class _$$LoadedMenuStateCopyWith<$Res> {
+  factory _$$LoadedMenuStateCopyWith(
+          _$LoadedMenuState value, $Res Function(_$LoadedMenuState) then) =
+      __$$LoadedMenuStateCopyWithImpl<$Res>;
   $Res call({List<OrderEntity> menu});
 }
 
 /// @nodoc
-class _$LoadedMenuStateCopyWithImpl<$Res> extends _$MenuStateCopyWithImpl<$Res>
-    implements $LoadedMenuStateCopyWith<$Res> {
-  _$LoadedMenuStateCopyWithImpl(
-      LoadedMenuState _value, $Res Function(LoadedMenuState) _then)
-      : super(_value, (v) => _then(v as LoadedMenuState));
+class __$$LoadedMenuStateCopyWithImpl<$Res>
+    extends _$MenuStateCopyWithImpl<$Res>
+    implements _$$LoadedMenuStateCopyWith<$Res> {
+  __$$LoadedMenuStateCopyWithImpl(
+      _$LoadedMenuState _value, $Res Function(_$LoadedMenuState) _then)
+      : super(_value, (v) => _then(v as _$LoadedMenuState));
 
   @override
-  LoadedMenuState get _value => super._value as LoadedMenuState;
+  _$LoadedMenuState get _value => super._value as _$LoadedMenuState;
 
   @override
   $Res call({
     Object? menu = freezed,
   }) {
-    return _then(LoadedMenuState(
+    return _then(_$LoadedMenuState(
       menu == freezed
-          ? _value.menu
+          ? _value._menu
           : menu // ignore: cast_nullable_to_non_nullable
               as List<OrderEntity>,
     ));
@@ -491,10 +467,14 @@ class _$LoadedMenuStateCopyWithImpl<$Res> extends _$MenuStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadedMenuState implements LoadedMenuState {
-  const _$LoadedMenuState(this.menu);
+  const _$LoadedMenuState(final List<OrderEntity> menu) : _menu = menu;
 
+  final List<OrderEntity> _menu;
   @override
-  final List<OrderEntity> menu;
+  List<OrderEntity> get menu {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_menu);
+  }
 
   @override
   String toString() {
@@ -505,18 +485,18 @@ class _$LoadedMenuState implements LoadedMenuState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LoadedMenuState &&
-            const DeepCollectionEquality().equals(other.menu, menu));
+            other is _$LoadedMenuState &&
+            const DeepCollectionEquality().equals(other._menu, _menu));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(menu));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_menu));
 
   @JsonKey(ignore: true)
   @override
-  $LoadedMenuStateCopyWith<LoadedMenuState> get copyWith =>
-      _$LoadedMenuStateCopyWithImpl<LoadedMenuState>(this, _$identity);
+  _$$LoadedMenuStateCopyWith<_$LoadedMenuState> get copyWith =>
+      __$$LoadedMenuStateCopyWithImpl<_$LoadedMenuState>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -594,10 +574,11 @@ class _$LoadedMenuState implements LoadedMenuState {
 }
 
 abstract class LoadedMenuState implements MenuState {
-  const factory LoadedMenuState(List<OrderEntity> menu) = _$LoadedMenuState;
+  const factory LoadedMenuState(final List<OrderEntity> menu) =
+      _$LoadedMenuState;
 
   List<OrderEntity> get menu;
   @JsonKey(ignore: true)
-  $LoadedMenuStateCopyWith<LoadedMenuState> get copyWith =>
+  _$$LoadedMenuStateCopyWith<_$LoadedMenuState> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -46,7 +46,18 @@ class CartButton extends StatelessWidget {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(shape: const StadiumBorder(), backgroundColor: theme.primaryColor),
-                onPressed: () {},
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      backgroundColor: theme.primaryColor,
+                      content: Text(
+                        appLocalizations.thanksOrder,
+                        style: theme.textTheme.bodyText2?.copyWith(color: Colors.white),
+                      ),
+                      duration: const Duration(seconds: 5),
+                    ),
+                  );
+                },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Text(

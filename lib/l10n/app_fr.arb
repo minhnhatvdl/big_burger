@@ -7,5 +7,6 @@
     "completeOrderButton": "Finaliser la commande",
     "serverError": "Malheureusement, une erreur du serveur nous a empêché de finaliser votre demande. Merci de réessayer.",
     "refreshButton": "Rafraîchir",
-    "updateButton": "Mettre à jour"
+    "updateButton": "Mettre à jour",
+    "thanksOrder": "Nous vous remercions de votre commande"
 }
